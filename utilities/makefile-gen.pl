@@ -61,14 +61,11 @@ include $configFile
 
 EXTRA_FLAGS=$extra_flags{$kernel}
 
-$kernel.wasm: $kernel.c $kernel.h
-	\${VERBOSE} emcc -o $kernel.wasm $kernel.c \${CFLAGS} -I. -I$utilityDir $utilityDir/polybench.c \${EXTRA_FLAGS}
-
 $kernel: $kernel.c $kernel.h
 	\${VERBOSE} \${CC} -o $kernel $kernel.c \${CFLAGS} -I. -I$utilityDir $utilityDir/polybench.c \${EXTRA_FLAGS}
 
 clean:
-	@ rm -f $kernel $kernel.wasm
+	@ rm -f $kernel
 
 EOF
 
