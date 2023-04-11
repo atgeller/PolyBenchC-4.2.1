@@ -222,12 +222,12 @@
     ;; Hand inserted check that sizes are legal
     block (type 21)
       local.get 2
-      i32.const 9600000
+      i32.const 8000000
       i32.add
       i32.const 33554432
       i32.lt_u
       local.get 3
-      i32.const 8000000
+      i32.const 9600000
       i32.add
       i32.const 33554432
       i32.lt_u
@@ -250,6 +250,7 @@
       i32.const 33554432
       i32.lt_u
       i32.and
+      br_if 0
       unreachable
     end
     ;; end hand inserted check
@@ -393,6 +394,7 @@
       i32.const 33554432
       i32.lt_u
       i32.and
+      br_if 0
       unreachable
     end
     ;; end hand inserted check

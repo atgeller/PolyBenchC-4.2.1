@@ -262,6 +262,7 @@
       i32.const 33554432
       i32.lt_u
       i32.and
+      br_if 0
       unreachable
     end
     ;; end hand inserted check
@@ -436,6 +437,7 @@
       i32.const 33554432
       i32.lt_u
       i32.and
+      br_if 0
       unreachable
     end
     ;; end hand inserted check
