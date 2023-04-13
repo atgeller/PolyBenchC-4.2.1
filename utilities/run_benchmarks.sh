@@ -6,10 +6,6 @@ do
     benchmark=$(basename ${i%.*})
     echo Evaluating $benchmark
 
-    ##hyperfine $(printf "'~/wasmtime/target/release/wasmtime --allow-precompiled %s/%s_plain.cwasm'" $path $benchmark)
-
-    eval "hyperfine $(printf "'~/wasmtime/target/release/wasmtime --allow-precompiled %s/%s_plain.cwasm'" $path $benchmark)"
-
     echo Compiling with plain wasmtime
     ~/wasmtime/target/release/wasmtime compile $path/${benchmark}_plain.wat -o $path/${benchmark}_plain.cwasm
     echo Running
