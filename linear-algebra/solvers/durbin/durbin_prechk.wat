@@ -76,7 +76,6 @@
                       (eq (local 0) (old_local 0))
                       (eq (local 1) (old_local 1))
                       (eq (local 5) (old_local 5)))))
-  (type (;26;)
   (import "wasi_snapshot_preview1" "args_sizes_get" (func $__wasi_args_sizes_get (type 2)))
   (import "wasi_snapshot_preview1" "args_get" (func $__wasi_args_get (type 2)))
   (import "wasi_snapshot_preview1" "proc_exit" (func $__wasi_proc_exit (type 3)))
