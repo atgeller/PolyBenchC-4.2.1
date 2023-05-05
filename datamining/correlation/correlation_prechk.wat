@@ -6,52 +6,243 @@
   (type (;4;) (func (result i32)))
   (type (;5;) (func))
   (type (;6;) (func (param i32 i64 i32) (result i64)))
-  (type (;7;) (func (param i64 i32) (result i32)))
-  (type (;8;) (func (param i32 i32 i32 i32) (result i32)))
-  (type (;9;) (func (param i32 i32 i32)))
+  (type (;7;) (func (param i32 i32)))
+  (type (;8;) (func (param i64 i32) (result i32)))
+  (type (;9;) (func (param i32 i32 i32 i32) (result i32)))
   (type (;10;) (func (param i32 f64 i32 i32 i32 i32) (result i32)))
-  (type (;11;) (func (param i32 i32)))
-  (type (;12;) (func (param i32 i64 i32 i32) (result i32)))
-  (type (;13;) (func (param f64 i32 i32)))
-  (type (;14;) (func (param f64 i32) (result f64)))
-  (type (;15;) (func (param i32 i32 i32 i32 i32) (result i32)))
-  (type (;16;) (func (param i32 i32 i32 i32 i32 i32 i32) (result i32)))
+  (type (;11;) (func (param i32 i64 i32 i32) (result i32)))
+  (type (;12;) (func (param f64 i32 i32 i32 i32)))
+  (type (;13;) (func (param f64 i32) (result f64)))
+  (type (;14;) (func (param i32 i32 i32 i32 i32) (result i32)))
+  (type (;15;) (func (param i32 i32 i32 i32 i32 i32 i32) (result i32)))
+  (type (;16;) (func (param i32 i32 i32)))
   (type (;17;) (func (param i32 i32 i32 i32)))
   (type (;18;) (func (param i64 i32 i32) (result i32)))
   (type (;19;) (func (param i32 i32 i32 i32 i32)))
   (type (;20;) (func (param f64) (result i64)))
+  (type (;21;) (func (post
+                      (eq (i32 1) (i32.lt_u (local 1) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 1) (i32 13440000)) (i32 67108864)))
+                      (eq (local 2) (old_local 2)))))
+  (type (;22;) (func (pre
+                      (eq (i32 1) (i32.lt_u (local 1) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 1) (i32 13440000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 2) (i32 1400))))))
+  (type (;23;) (func (pre
+                      (eq (i32 1) (i32.lt_u (local 1) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 1) (i32 13440000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 2) (i32 1400)))
+                      (eq (i32 1) (i32.lt_u (local 0) (i32 1200))))
+                     (post
+                      (eq (local 1) (old_local 1))
+                      (eq (local 2) (old_local 2)))))
+  (type (;24;) (func (post
+                      (eq (i32 1) (i32.lt_u (local 1) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 1) (i32 13440000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 2) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 11520000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 3) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 3) (i32 9600)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 4) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 4) (i32 9600)) (i32 67108864)))
+                      (eq (local 7) (old_local 7))
+                      (eq (local 10) (old_local 10))
+                      (eq (local 11) (old_local 11)))))
+  (type (;25;) (func (pre
+                      (eq (i32 1) (i32.lt_u (local 1) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 1) (i32 13440000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 2) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 11520000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 3) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 3) (i32 9600)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 4) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 4) (i32 9600)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 7) (i32 1200))))
+                     (post
+                      (eq (local 1) (old_local 1))
+                      (eq (local 2) (old_local 2))
+                      (eq (local 3) (old_local 3))
+                      (eq (local 4) (old_local 4))
+                      (eq (local 10) (old_local 10))
+                      (eq (local 11) (old_local 11)))))
+  (type (;26;) (func (pre
+                      (eq (i32 1) (i32.lt_u (local 1) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 1) (i32 13440000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 2) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 11520000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 3) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 3) (i32 9600)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 4) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 4) (i32 9600)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 7) (i32 1200)))
+                      (eq (i32 1) (i32.lt_u (local 6) (i32 1400)))
+                      (eq (local 8) (i32.shl (local 7) (i32 3)))
+                      (eq (local 9) (i32.add (local 8) (local 3))))
+                     (post
+                      (eq (local 1) (old_local 1))
+                      (eq (local 2) (old_local 2))
+                      (eq (local 3) (old_local 3))
+                      (eq (local 4) (old_local 4))
+                      (eq (local 7) (old_local 7))
+                      (eq (local 10) (old_local 10))
+                      (eq (local 11) (old_local 11))
+                      (eq (local 9) (old_local 9)))))
+  (type (;27;) (func (pre
+                      (eq (i32 1) (i32.lt_u (local 1) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 1) (i32 13440000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 2) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 11520000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 3) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 3) (i32 9600)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 4) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 4) (i32 9600)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 10) (i32 1200))))
+                     (post
+                      (eq (local 1) (old_local 1))
+                      (eq (local 2) (old_local 2))
+                      (eq (local 3) (old_local 3))
+                      (eq (local 4) (old_local 4))
+                      (eq (local 11) (old_local 11)))))
+  (type (;28;) (func (pre
+                      (eq (i32 1) (i32.lt_u (local 1) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 1) (i32 13440000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 2) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 11520000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 3) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 3) (i32 9600)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 4) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 4) (i32 9600)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 10) (i32 1200)))
+                      (eq (i32 1) (i32.lt_u (local 6) (i32 1400)))
+                      (eq (local 9) (i32.shl (local 10) (i32 3)))
+                      (eq (local 8) (i32.add (local 9) (local 4)))
+                      (eq (local 7) (i32.add (local 9) (local 3))))
+                     (post
+                      (eq (local 1) (old_local 1))
+                      (eq (local 2) (old_local 2))
+                      (eq (local 3) (old_local 3))
+                      (eq (local 4) (old_local 4))
+                      (eq (local 10) (old_local 10))
+                      (eq (local 11) (old_local 11))
+                      (eq (local 8) (old_local 8)))))
+  (type (;29;) (func (pre
+                      (eq (i32 1) (i32.lt_u (local 1) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 1) (i32 13440000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 2) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 11520000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 3) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 3) (i32 9600)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 4) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 4) (i32 9600)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 7) (i32 1400))))
+                     (post
+                      (eq (local 1) (old_local 1))
+                      (eq (local 2) (old_local 2))
+                      (eq (local 3) (old_local 3))
+                      (eq (local 11) (old_local 11)))))
+  (type (;30;) (func (pre
+                      (eq (i32 1) (i32.lt_u (local 1) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 1) (i32 13440000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 2) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 11520000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 3) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 3) (i32 9600)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 4) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 4) (i32 9600)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 7) (i32 1400)))
+                      (eq (i32 1) (i32.lt_u (local 6) (i32 1200))))
+                     (post
+                      (eq (local 1) (old_local 1))
+                      (eq (local 2) (old_local 2))
+                      (eq (local 3) (old_local 3))
+                      (eq (local 4) (old_local 4))
+                      (eq (local 7) (old_local 7))
+                      (eq (local 11) (old_local 11)))))
+  (type (;31;) (func (pre
+                      (eq (i32 1) (i32.lt_u (local 1) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 1) (i32 13440000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 2) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 11520000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 11) (i32 1199))))
+                     (post
+                      (eq (local 2) (old_local 2)))))
+  (type (;32;) (func (pre
+                      (eq (i32 1) (i32.lt_u (local 1) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 1) (i32 13440000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 2) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 11520000)) (i32 67108864)))
+                      (eq (i32 1) (i32.gt_u (local 11) (i32 0)))
+                      (eq (i32 1) (i32.lt_u (local 11) (i32 1200)))
+                      (eq (local 10) (i32.add (local 2) (i32.mul (i32.sub (local 11) (i32 1)) (i32 9600))))
+                      (eq (local 8) (i32.shl (i32.sub (local 11) (i32 1)) (i32 3)))
+                      (eq (i32 1) (i32.lt_u (local 4) (i32 1200))))
+                     (post
+                      (eq (local 1) (old_local 1))
+                      (eq (local 2) (old_local 2))
+                      (eq (local 11) (old_local 11)))))
+  (type (;33;) (func (pre
+                      (eq (i32 1) (i32.lt_u (local 1) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 1) (i32 13440000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 2) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 11520000)) (i32 67108864)))
+                      (eq (i32 1) (i32.gt_u (local 11) (i32 0)))
+                      (eq (i32 1) (i32.lt_u (local 11) (i32 1200)))
+                      (eq (local 10) (i32.add (local 2) (i32.mul (i32.sub (local 11) (i32 1)) (i32 9600))))
+                      (eq (local 8) (i32.shl (i32.sub (local 11) (i32 1)) (i32 3)))
+                      (eq (i32 1) (i32.lt_u (local 4) (i32 1200)))
+                      (eq (i32 1) (i32.lt_u (local 6) (i32 1400)))
+                      (eq (local 3) (i32.shl (local 4) (i32 3)))
+                      (eq (local 7) (i32.add (local 3) (local 10))))
+                     (post
+                      (eq (local 1) (old_local 1))
+                      (eq (local 2) (old_local 2))
+                      (eq (local 4) (old_local 4))
+                      (eq (local 11) (old_local 11))
+                      (eq (local 8) (old_local 8))
+                      (eq (local 10) (old_local 10)))))
   (import "wasi_snapshot_preview1" "args_sizes_get" (func $__wasi_args_sizes_get (type 2)))
   (import "wasi_snapshot_preview1" "args_get" (func $__wasi_args_get (type 2)))
   (import "wasi_snapshot_preview1" "proc_exit" (func $__wasi_proc_exit (type 3)))
   (import "wasi_snapshot_preview1" "fd_close" (func $__wasi_fd_close (type 0)))
-  (import "wasi_snapshot_preview1" "fd_write" (func $__wasi_fd_write (type 8)))
-  (import "wasi_snapshot_preview1" "fd_seek" (func $__wasi_fd_seek (type 12)))
+  (import "wasi_snapshot_preview1" "fd_write" (func $__wasi_fd_write (type 9)))
+  (import "wasi_snapshot_preview1" "fd_seek" (func $__wasi_fd_seek (type 11)))
   (func $__wasm_call_ctors (type 5)
     call $init_pthread_self)
   (func $main (type 2) (param i32 i32) (result i32)
-    (local i32 i32 i32)
+    (local i32 i32 i32 i32 i32)
     global.get 0
     i32.const 16
     i32.sub
     local.tee 2
     global.set 0
+    i64.const 1680000
+    i32.const 8
+    call $polybench_alloc_data
+    local.set 3
+    i64.const 1440000
+    i32.const 8
+    call $polybench_alloc_data
+    local.set 4
+    i64.const 1200
+    i32.const 8
+    call $polybench_alloc_data
+    local.set 5
+    i64.const 1200
+    i32.const 8
+    call $polybench_alloc_data
+    local.set 6
     local.get 2
     i32.const 8
     i32.add
-    i64.const 1000000
-    i32.const 8
-    call $polybench_alloc_data
-    local.tee 4
-    i64.const 1200000
-    i32.const 8
-    call $polybench_alloc_data
-    local.tee 3
+    local.get 3
     call $init_array
     local.get 2
     f64.load offset=8
-    local.get 4
     local.get 3
-    call $kernel_trmm
+    local.get 4
+    local.get 5
+    local.get 6
+    call $kernel_correlation
     block  ;; label = @1
       local.get 0
       i32.const 43
@@ -61,76 +252,51 @@
       i32.load
       i32.load8_u
       br_if 0 (;@1;)
-      local.get 3
+      local.get 4
       call $print_array
     end
+    local.get 3
+    call $dlfree
     local.get 4
     call $dlfree
-    local.get 3
+    local.get 5
+    call $dlfree
+    local.get 6
     call $dlfree
     local.get 2
     i32.const 16
     i32.add
     global.set 0
     i32.const 0)
-  (func $init_array (type 9) (param i32 i32 i32)
-    (local i32 i32)
-    local.get 0
-    i64.const 4609434218613702656
-    i64.store
-    loop  ;; label = @1
-      i32.const 0
-      local.set 0
-      local.get 3
-      if  ;; label = @2
-        loop  ;; label = @3
-          local.get 1
-          local.get 3
-          i32.const 8000
-          i32.mul
-          i32.add
-          local.get 0
-          i32.const 3
-          i32.shl
-          i32.add
-          local.get 0
-          local.get 3
-          i32.add
-          i32.const 1000
-          i32.rem_u
-          f64.convert_i32_s
-          f64.const 0x1.f4p+9 (;=1000;)
-          f64.div
-          f64.store
-          local.get 0
-          i32.const 1
-          i32.add
-          local.tee 0
-          local.get 3
-          i32.ne
-          br_if 0 (;@3;)
-        end
-      end
+  (func $init_array (type 7) (param i32 i32)
+    (local i32 f64)
+    ;; Hand inserted check that sizes are legal
+    block (type 21)
       local.get 1
-      local.get 3
-      i32.const 8000
-      i32.mul
+      i32.const 13440000
       i32.add
-      local.get 3
-      i32.const 3
-      i32.shl
-      i32.add
-      i64.const 4607182418800017408
-      i64.store
-      local.get 3
-      i32.const 1200
-      i32.add
-      local.set 4
+      i32.const 67108864
+      i32.lt_u
+      local.get 1
+      i32.const 67108864
+      i32.lt_u
+      i32.and
+      br_if 0
+      unreachable
+    end
+    ;; end hand inserted check
+    local.get 0
+    i64.const 4653872080561897472
+    i64.store
+    loop (type 22) ;; label = @1
+      local.get 2
+      f64.convert_i32_s
+      local.set 3
       i32.const 0
       local.set 0
-      loop  ;; label = @2
+      loop (type 23) ;; label = @2
+        local.get 1
         local.get 2
-        local.get 3
         i32.const 9600
         i32.mul
         i32.add
@@ -138,15 +304,15 @@
         i32.const 3
         i32.shl
         i32.add
-        local.get 4
         local.get 0
-        i32.sub
-        i32.const 1200
-        i32.rem_u
+        local.get 2
+        i32.mul
         f64.convert_i32_s
         f64.const 0x1.2cp+10 (;=1200;)
         f64.div
-        f64.store
+        local.get 3
+        f64.add
+        f64.store_prechk
         local.get 0
         i32.const 1
         i32.add
@@ -155,94 +321,319 @@
         i32.ne
         br_if 0 (;@2;)
       end
-      local.get 3
+      local.get 2
       i32.const 1
       i32.add
-      local.tee 3
-      i32.const 1000
+      local.tee 2
+      i32.const 1400
       i32.ne
       br_if 0 (;@1;)
     end)
-  (func $kernel_trmm (type 13) (param f64 i32 i32)
-    (local i32 i32 i32 f64 i32 i32)
-    loop  ;; label = @1
-      i32.const 0
+  (func $kernel_correlation (type 12) (param f64 i32 i32 i32 i32)
+    (local f64 i32 i32 i32 i32 i32 i32 f64)
+    ;; Hand inserted check that sizes are legal
+    block (type 24)
+      local.get 1
+      i32.const 13440000
+      i32.add
+      i32.const 67108864
+      i32.lt_u
+      local.get 2
+      i32.const 11520000
+      i32.add
+      i32.const 67108864
+      i32.lt_u
+      i32.and
+      local.get 3
+      i32.const 9600
+      i32.add
+      i32.const 67108864
+      i32.lt_u
+      i32.and
+      local.get 4
+      i32.const 9600
+      i32.add
+      i32.const 67108864
+      i32.lt_u
+      i32.and
+      local.get 1
+      i32.const 67108864
+      i32.lt_u
+      i32.and
+      local.get 2
+      i32.const 67108864
+      i32.lt_u
+      i32.and
+      local.get 3
+      i32.const 67108864
+      i32.lt_u
+      i32.and
+      local.get 4
+      i32.const 67108864
+      i32.lt_u
+      i32.and
+      br_if 0
+      unreachable
+    end
+    ;; end hand inserted check
+    loop (type 25) ;; label = @1
+      local.get 3
+      local.get 7
+      i32.const 3
+      i32.shl
+      local.tee 8
+      i32.add
+      local.tee 9
+      i64.const 0
+      i64.store_prechk
+      f64.const 0x0p+0 (;=0;)
       local.set 5
-      loop  ;; label = @2
+      i32.const 0
+      local.set 6
+      loop (type 26) ;; label = @2
+        local.get 9
+        local.get 1
+        local.get 6
+        i32.const 9600
+        i32.mul
+        i32.add
+        local.get 8
+        i32.add
+        f64.load
         local.get 5
+        f64.add
+        local.tee 5
+        f64.store_prechk
+        local.get 6
+        i32.const 1
+        i32.add
+        local.tee 6
+        i32.const 1400
+        i32.ne
+        br_if 0 (;@2;)
+      end
+      local.get 9
+      local.get 5
+      local.get 0
+      f64.div
+      f64.store_prechk
+      local.get 7
+      i32.const 1
+      i32.add
+      local.tee 7
+      i32.const 1200
+      i32.ne
+      br_if 0 (;@1;)
+    end
+    loop (type 27) ;; label = @1
+      local.get 4
+      local.get 10
+      i32.const 3
+      i32.shl
+      local.tee 9
+      i32.add
+      local.tee 8
+      i64.const 0
+      i64.store_prechk
+      local.get 3
+      local.get 9
+      i32.add
+      local.set 7
+      i32.const 0
+      local.set 6
+      f64.const 0x0p+0 (;=0;)
+      local.set 5
+      loop (type 28) ;; label = @2
+        local.get 8
+        local.get 1
+        local.get 6
+        i32.const 9600
+        i32.mul
+        i32.add
+        local.get 9
+        i32.add
+        f64.load_prechk
+        local.get 7
+        f64.load_prechk
+        f64.sub
+        local.tee 12
+        local.get 12
+        f64.mul
+        local.get 5
+        f64.add
+        local.tee 5
+        f64.store_prechk
+        local.get 6
+        i32.const 1
+        i32.add
+        local.tee 6
+        i32.const 1400
+        i32.ne
+        br_if 0 (;@2;)
+      end
+      local.get 8
+      f64.const 0x1p+0 (;=1;)
+      local.get 5
+      local.get 0
+      f64.div
+      f64.sqrt
+      local.tee 5
+      local.get 5
+      f64.const 0x1.999999999999ap-4 (;=0.1;)
+      f64.le
+      select
+      f64.store_prechk
+      local.get 10
+      i32.const 1
+      i32.add
+      local.tee 10
+      i32.const 1200
+      i32.ne
+      br_if 0 (;@1;)
+    end
+    local.get 0
+    f64.sqrt
+    local.set 12
+    i32.const 0
+    local.set 7
+    loop (type 29) ;; label = @1
+      i32.const 0
+      local.set 6
+      loop (type 30) ;; label = @2
+        local.get 6
         i32.const 3
         i32.shl
-        local.tee 8
-        local.get 2
-        local.get 3
+        local.tee 9
+        local.get 1
+        local.get 7
         i32.const 9600
         i32.mul
         i32.add
         i32.add
-        local.tee 7
-        f64.load
-        local.set 6
+        local.tee 8
+        local.get 8
+        f64.load_prechk
         local.get 3
-        local.set 4
-        local.get 3
-        i32.const 998
-        i32.le_u
-        if  ;; label = @3
-          loop  ;; label = @4
-            local.get 7
-            local.get 1
-            local.get 4
-            i32.const 1
-            i32.add
-            local.tee 4
-            i32.const 8000
-            i32.mul
-            i32.add
-            local.get 3
-            i32.const 3
-            i32.shl
-            i32.add
-            f64.load
-            local.get 2
-            local.get 4
-            i32.const 9600
-            i32.mul
-            i32.add
-            local.get 8
-            i32.add
-            f64.load
-            f64.mul
-            local.get 6
-            f64.add
-            local.tee 6
-            f64.store
-            local.get 4
-            i32.const 999
-            i32.ne
-            br_if 0 (;@4;)
-          end
-        end
-        local.get 7
-        local.get 6
-        local.get 0
-        f64.mul
-        f64.store
+        local.get 9
+        i32.add
+        f64.load_prechk
+        f64.sub
+        local.tee 5
+        f64.store_prechk
+        local.get 8
         local.get 5
+        local.get 12
+        local.get 4
+        local.get 9
+        i32.add
+        f64.load_prechk
+        f64.mul
+        f64.div
+        f64.store_prechk
+        local.get 6
         i32.const 1
         i32.add
-        local.tee 5
+        local.tee 6
         i32.const 1200
         i32.ne
         br_if 0 (;@2;)
       end
-      local.get 3
+      local.get 7
       i32.const 1
       i32.add
-      local.tee 3
-      i32.const 1000
+      local.tee 7
+      i32.const 1400
       i32.ne
       br_if 0 (;@1;)
-    end)
+    end
+    loop (type 31) ;; label = @1
+      local.get 2
+      local.get 11
+      i32.const 9600
+      i32.mul
+      i32.add
+      local.tee 10
+      local.get 11
+      i32.const 3
+      i32.shl
+      local.tee 8
+      i32.add
+      i64.const 4607182418800017408
+      i64.store_prechk
+      local.get 11
+      i32.const 1
+      i32.add
+      local.tee 11
+      local.set 4
+      loop (type 32) ;; label = @2
+        local.get 10
+        local.get 4
+        i32.const 3
+        i32.shl
+        local.tee 3
+        i32.add
+        local.tee 7
+        i64.const 0
+        i64.store_prechk
+        i32.const 0
+        local.set 6
+        f64.const 0x0p+0 (;=0;)
+        local.set 5
+        loop (type 33) ;; label = @3
+          local.get 7
+          local.get 1
+          local.get 6
+          i32.const 9600
+          i32.mul
+          i32.add
+          local.tee 9
+          local.get 8
+          i32.add
+          f64.load_prechk
+          local.get 3
+          local.get 9
+          i32.add
+          f64.load_prechk
+          f64.mul
+          local.get 5
+          f64.add
+          local.tee 5
+          f64.store_prechk
+          local.get 6
+          i32.const 1
+          i32.add
+          local.tee 6
+          i32.const 1400
+          i32.ne
+          br_if 0 (;@3;)
+        end
+        local.get 2
+        local.get 4
+        i32.const 9600
+        i32.mul
+        i32.add
+        local.get 8
+        i32.add
+        local.get 5
+        f64.store_prechk
+        local.get 4
+        i32.const 1
+        i32.add
+        local.tee 4
+        i32.const 1200
+        i32.ne
+        br_if 0 (;@2;)
+      end
+      local.get 11
+      i32.const 1199
+      i32.ne
+      br_if 0 (;@1;)
+    end
+    local.get 2
+    i32.const 11519992
+    i32.add
+    i64.const 4607182418800017408
+    i64.store_prechk)
   (func $print_array (type 3) (param i32)
     (local i32 i32 i32 i32 i32)
     global.get 0
@@ -250,7 +641,7 @@
     i32.sub
     local.tee 1
     global.set 0
-    i32.const 1171
+    i32.const 1174
     i32.const 22
     i32.const 1
     i32.const 1220
@@ -259,7 +650,7 @@
     call $fwrite
     drop
     local.get 1
-    i32.const 1135
+    i32.const 1119
     i32.store offset=32
     local.get 2
     i32.const 1104
@@ -270,7 +661,7 @@
     drop
     loop  ;; label = @1
       local.get 3
-      i32.const 1000
+      i32.const 1200
       i32.mul
       local.set 5
       i32.const 0
@@ -301,7 +692,7 @@
         f64.load
         f64.store offset=16
         local.get 2
-        i32.const 1146
+        i32.const 1149
         local.get 1
         i32.const 16
         i32.add
@@ -319,19 +710,19 @@
       i32.const 1
       i32.add
       local.tee 3
-      i32.const 1000
+      i32.const 1200
       i32.ne
       br_if 0 (;@1;)
     end
     local.get 1
-    i32.const 1135
+    i32.const 1119
     i32.store
     local.get 2
-    i32.const 1154
+    i32.const 1157
     local.get 1
     call $fiprintf
     drop
-    i32.const 1194
+    i32.const 1197
     i32.const 22
     i32.const 1
     local.get 2
@@ -341,7 +732,7 @@
     i32.const 48
     i32.add
     global.set 0)
-  (func $polybench_alloc_data (type 7) (param i64 i32) (result i32)
+  (func $polybench_alloc_data (type 8) (param i64 i32) (result i32)
     local.get 0
     i32.wrap_i64
     local.get 1
@@ -1203,7 +1594,7 @@
       local.set 4
     end
     local.get 4)
-  (func $fwrite (type 8) (param i32 i32 i32 i32) (result i32)
+  (func $fwrite (type 9) (param i32 i32 i32 i32) (result i32)
     (local i32 i32)
     local.get 1
     local.get 2
@@ -1820,7 +2211,7 @@
     local.get 1
     local.get 2
     select)
-  (func $frexp (type 14) (param f64 i32) (result f64)
+  (func $frexp (type 13) (param f64 i32) (result f64)
     (local i32 i64)
     local.get 0
     i64.reinterpret_f64
@@ -1874,7 +2265,7 @@
       local.set 0
     end
     local.get 0)
-  (func $__vfprintf_internal (type 15) (param i32 i32 i32 i32 i32) (result i32)
+  (func $__vfprintf_internal (type 14) (param i32 i32 i32 i32 i32) (result i32)
     (local i32 i32 i32 i32)
     global.get 0
     i32.const 208
@@ -2050,7 +2441,7 @@
     i32.add
     global.set 0
     local.get 1)
-  (func $printf_core (type 16) (param i32 i32 i32 i32 i32 i32 i32) (result i32)
+  (func $printf_core (type 15) (param i32 i32 i32 i32 i32 i32 i32) (result i32)
     (local i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i64 i32 i32 i32)
     global.get 0
     i32.const 80
@@ -2836,7 +3227,7 @@
                                         local.get 7
                                         i32.load offset=64
                                         local.tee 1
-                                        i32.const 1139
+                                        i32.const 1142
                                         local.get 1
                                         select
                                         local.tee 12
@@ -3228,7 +3619,7 @@
     i32.add
     global.set 0
     local.get 14)
-  (func $out (type 9) (param i32 i32 i32)
+  (func $out (type 16) (param i32 i32 i32)
     local.get 0
     i32.load8_u
     i32.const 32
@@ -3402,7 +3793,7 @@
             local.get 0
             local.get 2
             local.get 3
-            call_indirect (type 11)
+            call_indirect (type 7)
           end
           return
         end
@@ -3481,7 +3872,7 @@
       end
     end
     local.get 1)
-  (func $fmt_o (type 7) (param i64 i32) (result i32)
+  (func $fmt_o (type 8) (param i64 i32) (result i32)
     (local i32)
     local.get 0
     i64.eqz
@@ -3512,7 +3903,7 @@
       end
     end
     local.get 1)
-  (func $fmt_u (type 7) (param i64 i32) (result i32)
+  (func $fmt_u (type 8) (param i64 i32) (result i32)
     (local i32 i64 i32 i32)
     block  ;; label = @1
       local.get 0
@@ -3712,15 +4103,15 @@
         local.get 18
         call $out
         local.get 0
-        i32.const 1119
-        i32.const 1127
+        i32.const 1124
+        i32.const 1132
         local.get 5
         i32.const 32
         i32.and
         local.tee 7
         select
-        i32.const 1123
-        i32.const 1131
+        i32.const 1128
+        i32.const 1136
         local.get 7
         select
         local.get 1
@@ -4765,7 +5156,7 @@
                 local.get 13
                 if  ;; label = @7
                   local.get 0
-                  i32.const 1137
+                  i32.const 1140
                   i32.const 1
                   call $out
                 end
@@ -4918,7 +5309,7 @@
                     i32.eqz
                     br_if 0 (;@8;)
                     local.get 0
-                    i32.const 1137
+                    i32.const 1140
                     i32.const 1
                     call $out
                   end
@@ -9532,7 +9923,7 @@
       local.set 3
     end
     local.get 3)
-  (func $dispose_chunk (type 11) (param i32 i32)
+  (func $dispose_chunk (type 7) (param i32 i32)
     (local i32 i32 i32 i32 i32 i32 i32)
     local.get 0
     local.get 1
@@ -10348,7 +10739,7 @@
     global.set 0
     local.get 1)
   (table (;0;) 8 8 funcref)
-  (memory (;0;) 2048 2048)
+  (memory (;0;) 1024 1024)
   (global (;0;) (mut i32) (i32.const 5246624))
   (export "memory" (memory 0))
   (export "_start" (func $_start))
@@ -10358,7 +10749,7 @@
   (export "stackRestore" (func $stackRestore))
   (export "stackAlloc" (func $stackAlloc))
   (elem (;0;) (i32.const 1) func $__wasm_call_ctors $__stdio_close $__stdio_write $__stdio_seek $__emscripten_stdout_close $__emscripten_stdout_seek $fmt_fp)
-  (data (;0;) (i32.const 1024) "[PolyBench] posix_memalign: cannot allocate memory\00-+   0X0x\00-0X+0X 0X-0x+0x 0x\00begin dump: %s\00nan\00inf\00NAN\00INF\00B\00.\00(null)\00%0.2lf \00\0aend   dump: %s\0a\00==BEGIN DUMP_ARRAYS==\0a\00==END   DUMP_ARRAYS==\0a\00\00\00\00\b0\06")
+  (data (;0;) (i32.const 1024) "[PolyBench] posix_memalign: cannot allocate memory\00-+   0X0x\00-0X+0X 0X-0x+0x 0x\00begin dump: %s\00corr\00nan\00inf\00NAN\00INF\00.\00(null)\00%0.2lf \00\0aend   dump: %s\0a\00==BEGIN DUMP_ARRAYS==\0a\00==END   DUMP_ARRAYS==\0a\00\b0\06")
   (data (;1;) (i32.const 1232) "\19\00\0a\00\19\19\19\00\00\00\00\05\00\00\00\00\00\00\09\00\00\00\00\0b\00\00\00\00\00\00\00\00\19\00\11\0a\19\19\19\03\0a\07\00\01\00\09\0b\18\00\00\09\06\0b\00\00\0b\00\06\19\00\00\00\19\19\19")
   (data (;2;) (i32.const 1313) "\0e\00\00\00\00\00\00\00\00\19\00\0a\0d\19\19\19\00\0d\00\00\02\00\09\0e\00\00\00\09\00\0e\00\00\0e")
   (data (;3;) (i32.const 1371) "\0c")

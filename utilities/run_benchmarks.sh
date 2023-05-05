@@ -21,7 +21,7 @@ do
     >&2 echo Compiling without any checks
     ~/wasmtime_no_checks_at_all/target/release/wasmtime compile $path/${benchmark}_prechk.wat -o $path/${benchmark}_prechk.cwasm
     >&2 echo Running
-    eval "hyperfine --export-json temp/$(echo $benchmark)_no_checks.json $(printf "'~/wasmtime/target/release/wasmtime --allow-precompiled %s/%s_prechk.cwasm'" $path $benchmark)" >> /dev/null
+    eval "hyperfine --export-json temp/$(echo $benchmark)_no_checks.json $(printf "'~/wasmtime/target/release/wasmtime --allow-precompiled %s/%s_plain.cwasm'" $path $benchmark)" >> /dev/null
 
     python3 utilities/generate_csv_line.py $benchmark temp/$(echo $benchmark)_plain.json temp/$(echo $benchmark)_prechk.json temp/$(echo $benchmark)_no_checks.json
 done
