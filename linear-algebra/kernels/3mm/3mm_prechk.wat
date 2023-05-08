@@ -347,7 +347,7 @@
                       (eq (i32 1) (i32.lt_u (local 1) (i32 1100)))
                       (eq (i32 1) (i32.lt_u (local 8) (i32 900)))
                       (eq (i32 1) (i32.le_u (local 10) (i32 8792)))
-                      (eq (i32 1) (i32.le_u (local 11) (i32.add (local 6) (i32 10559992))))
+                      (eq (i32 1) (i32.le_u (local 11) (i32.add (local 6) (i32 7039992))))
                       (eq (i32 1) (i32.lt_u (local 0) (i32 268435456)))
                       (eq (i32 1) (i32.lt_u (i32.add (local 0) (i32 5760000)) (i32 268435456)))
                       (eq (i32 1) (i32.lt_u (local 3) (i32 268435456)))
@@ -508,7 +508,7 @@
         f64.convert_i32_s
         f64.const 0x1.f4p+11 (;=4000;)
         f64.div
-        f64.store
+        f64.store_prechk
         local.get 5
         i32.const 1
         i32.add
@@ -553,7 +553,7 @@
         f64.convert_i32_s
         f64.const 0x1.194p+12 (;=4500;)
         f64.div
-        f64.store
+        f64.store_prechk
         local.get 5
         i32.const 900
         i32.ne
@@ -592,7 +592,7 @@
         f64.convert_i32_s
         f64.const 0x1.57cp+12 (;=5500;)
         f64.div
-        f64.store
+        f64.store_prechk
         local.get 5
         i32.const 1
         i32.add
@@ -636,7 +636,7 @@
         f64.convert_i32_s
         f64.const 0x1.388p+12 (;=5000;)
         f64.div
-        f64.store
+        f64.store_prechk
         local.get 5
         i32.const 1
         i32.add
@@ -749,7 +749,7 @@
         i32.add
         local.tee 11
         i64.const 0
-        i64.store
+        i64.store_prechk
         i32.const 0
         local.set 8
         f64.const 0x0p+0 (;=0;)
@@ -770,7 +770,7 @@
           i32.const 3
           i32.shl
           i32.add
-          f64.load
+          f64.load_prechk
           local.get 2
           local.get 8
           i32.const 7200
@@ -778,12 +778,12 @@
           i32.add
           local.get 10
           i32.add
-          f64.load
+          f64.load_prechk
           f64.mul
           local.get 9
           f64.add
           local.tee 9
-          f64.store
+          f64.store_prechk
           local.get 8
           i32.const 1
           i32.add
@@ -829,7 +829,7 @@
         i32.add
         local.tee 11
         i64.const 0
-        i64.store
+        i64.store_prechk
         f64.const 0x0p+0 (;=0;)
         local.set 9
         i32.const 0
@@ -850,7 +850,7 @@
           i32.const 3
           i32.shl
           i32.add
-          f64.load
+          f64.load_prechk
           local.get 5
           local.get 8
           i32.const 8800
@@ -858,12 +858,12 @@
           i32.add
           local.get 10
           i32.add
-          f64.load
+          f64.load_prechk
           f64.mul
           local.get 9
           f64.add
           local.tee 9
-          f64.store
+          f64.store_prechk
           local.get 8
           i32.const 1
           i32.add
@@ -909,7 +909,7 @@
         i32.add
         local.tee 11
         i64.const 0
-        i64.store
+        i64.store_prechk
         f64.const 0x0p+0 (;=0;)
         local.set 9
         i32.const 0
@@ -930,7 +930,7 @@
           i32.const 3
           i32.shl
           i32.add
-          f64.load
+          f64.load_prechk
           local.get 3
           local.get 8
           i32.const 8800
@@ -938,12 +938,12 @@
           i32.add
           local.get 10
           i32.add
-          f64.load
+          f64.load_prechk
           f64.mul
           local.get 9
           f64.add
           local.tee 9
-          f64.store
+          f64.store_prechk
           local.get 8
           i32.const 1
           i32.add
