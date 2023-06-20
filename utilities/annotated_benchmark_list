@@ -17,3 +17,9 @@
 ./linear-algebra/solvers/lu/lu.c
 ./linear-algebra/solvers/ludcmp/ludcmp.c
 ./linear-algebra/solvers/trisolv/trisolv.c
+./datamining/correlation/correlation.c
+./datamining/covariance/covariance.c
+./medley/deriche/deriche.c
+./medley/floyd-warshall/floyd-warshall.c
+./medley/nussinov/nussinov.c
+./stencils/adi/adi.c
