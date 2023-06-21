@@ -40,6 +40,7 @@ for i in range(len(json_files)):
     if i != 0:
         csv_line += f","
     csv_line += f"{results['mean'][i]},{results['sem'][i]}"
+csv_line += f"\n"
 
 if args.cutoff != None and results['mean'][0] <= args.cutoff:
     with open(args.small_csv, "a") as myfile:
