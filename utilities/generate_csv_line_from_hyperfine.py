@@ -35,8 +35,13 @@ for json_file in json_files:
         results['sem'].append(sem)
 
 # Print CSV line for the benchmark
-csv_line = f"{benchmark_name},{results['mean'][0]},{results['sem'][0]},{results['mean'][1]},{results['sem'][1]},{results['mean'][2]},{results['sem'][2]}\n"
-if args.cutoff != None and results['mean'][2] <= args.cutoff:
+csv_line = f"{benchmark_name},"
+for i in range(len(json_files)):
+    if i != 0:
+        csv_line += f","
+    csv_line += f"{results['mean'][i]},{results['sem'][i]}"
+
+if args.cutoff != None and results['mean'][0] <= args.cutoff:
     with open(args.small_csv, "a") as myfile:
         myfile.write(csv_line)
 else:
