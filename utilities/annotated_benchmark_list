@@ -23,3 +23,4 @@
 ./medley/floyd-warshall/floyd-warshall.c
 ./medley/nussinov/nussinov.c
 ./stencils/adi/adi.c
+./stencils/fdtd-2d/fdtd-2d.c
