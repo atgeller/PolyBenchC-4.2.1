@@ -22,14 +22,14 @@
   (type (;20;) (func (param f64) (result i64)))
   (type (;21;) (func (post
                       (eq (i32 1) (i32.lt_u (local 2) (i32 67108864)))
-                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 8000000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 11520000)) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (local 3) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (i32.add (local 3) (i32 9600000)) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (local 4) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (i32.add (local 4) (i32 9600000)) (i32 67108864))))))
   (type (;22;) (func (pre
                       (eq (i32 1) (i32.lt_u (local 2) (i32 67108864)))
-                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 8000000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 11520000)) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (local 3) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (i32.add (local 3) (i32 9600000)) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (local 4) (i32 67108864)))
@@ -41,7 +41,7 @@
                       (eq (local 4) (old_local 4)))))
   (type (;23;) (func (pre
                       (eq (i32 1) (i32.lt_u (local 2) (i32 67108864)))
-                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 8000000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 11520000)) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (local 3) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (i32.add (local 3) (i32 9600000)) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (local 4) (i32 67108864)))
@@ -55,7 +55,7 @@
                       (eq (local 4) (old_local 4)))))
   (type (;24;) (func (pre
                       (eq (i32 1) (i32.lt_u (local 2) (i32 67108864)))
-                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 8000000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 11520000)) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (local 3) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (i32.add (local 3) (i32 9600000)) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (local 4) (i32 67108864)))
@@ -63,7 +63,7 @@
                       (eq (i32 1) (i32.lt_u (local 0) (i32 1200))))))
   (type (;25;) (func (pre
                       (eq (i32 1) (i32.lt_u (local 2) (i32 67108864)))
-                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 8000000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 11520000)) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (local 3) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (i32.add (local 3) (i32 9600000)) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (local 4) (i32 67108864)))
@@ -77,7 +77,7 @@
                       (eq (local 4) (old_local 4)))))
   (type (;26;) (func (post
                       (eq (i32 1) (i32.lt_u (local 2) (i32 67108864)))
-                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 8000000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 11520000)) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (local 3) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (i32.add (local 3) (i32 9600000)) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (local 4) (i32 67108864)))
@@ -85,7 +85,7 @@
                       (eq (local 7) (old_local 7)))))
   (type (;27;) (func (pre
                       (eq (i32 1) (i32.lt_u (local 2) (i32 67108864)))
-                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 8000000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 11520000)) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (local 3) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (i32.add (local 3) (i32 9600000)) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (local 4) (i32 67108864)))
@@ -98,7 +98,7 @@
                       (eq (local 4) (old_local 4)))))
   (type (;28;) (func (pre
                       (eq (i32 1) (i32.lt_u (local 2) (i32 67108864)))
-                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 8000000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 11520000)) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (local 3) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (i32.add (local 3) (i32 9600000)) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (local 4) (i32 67108864)))
@@ -116,7 +116,7 @@
                       (eq (local 11) (i32.add (local 2) (i32.mul (local 7) (i32 9600)))))))
   (type (;29;) (func (pre
                       (eq (i32 1) (i32.lt_u (local 2) (i32 67108864)))
-                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 8000000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 11520000)) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (local 3) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (i32.add (local 3) (i32 9600000)) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (local 4) (i32 67108864)))
@@ -133,7 +133,7 @@
                       (eq (local 4) (old_local 4)))))
   (type (;30;) (func (pre
                       (eq (i32 1) (i32.lt_u (local 2) (i32 67108864)))
-                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 8000000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 2) (i32 11520000)) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (local 3) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (i32.add (local 3) (i32 9600000)) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (local 4) (i32 67108864)))
@@ -222,7 +222,7 @@
     ;; Hand inserted check that sizes are legal
     block (type 21)
       local.get 2
-      i32.const 8000000
+      i32.const 11520000
       i32.add
       i32.const 67108864
       i32.lt_u
@@ -288,7 +288,7 @@
         f64.convert_i32_s
         f64.const 0x1.2cp+10 (;=1200;)
         f64.div
-        f64.store
+        f64.store_prechk
         local.get 4
         local.get 6
         i32.add
@@ -302,7 +302,7 @@
         f64.convert_i32_s
         f64.const 0x1.f4p+9 (;=1000;)
         f64.div
-        f64.store
+        f64.store_prechk
         local.get 1
         i32.const 1
         i32.add
@@ -344,7 +344,7 @@
         f64.convert_i32_s
         f64.const 0x1.f4p+9 (;=1000;)
         f64.div
-        f64.store
+        f64.store_prechk
         local.get 1
         i32.const 1
         i32.add
@@ -366,7 +366,7 @@
     ;; Hand inserted check that sizes are legal
     block (type 26)
       local.get 2
-      i32.const 8000000
+      i32.const 11520000
       i32.add
       i32.const 67108864
       i32.lt_u
@@ -416,10 +416,10 @@
         i32.add
         local.tee 6
         local.get 6
-        f64.load
+        f64.load_prechk
         local.get 1
         f64.mul
-        f64.store
+        f64.store_prechk
         i32.const 0
         local.set 9
         local.get 5
@@ -459,7 +459,7 @@
           i32.add
           local.tee 10
           local.get 10
-          f64.load
+          f64.load_prechk
           local.get 3
           local.get 5
           i32.const 8000
@@ -468,26 +468,26 @@
           i32.add
           local.get 6
           i32.add
-          f64.load
+          f64.load_prechk
           local.get 0
           f64.mul
           local.get 13
-          f64.load
+          f64.load_prechk
           f64.mul
           local.get 4
           local.get 10
           i32.add
           local.get 6
           i32.add
-          f64.load
+          f64.load_prechk
           local.get 0
           f64.mul
           local.get 12
-          f64.load
+          f64.load_prechk
           f64.mul
           f64.add
           f64.add
-          f64.store
+          f64.store_prechk
           local.get 5
           i32.const 1
           i32.add
