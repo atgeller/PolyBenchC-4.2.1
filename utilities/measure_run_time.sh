@@ -20,9 +20,9 @@ do
     eval "hyperfine --export-json run_time/$(echo $benchmark)_prechk.json $(printf "'~/wasmtime/target/release/wasmtime --allow-precompiled %s/%s_prechk.cwasm'" $path $benchmark)" >> /dev/null
 
     >&2 echo Compiling without any checks
-    ~/wasmtime_no_checks_at_all/target/release/wasmtime compile $path/${benchmark}_plain.wat -o $path/${benchmark}_no_checks.cwasm
+    ~/no_checks/target/release/wasmtime compile $path/${benchmark}_plain.wat -o $path/${benchmark}_no_checks.cwasm
     >&2 echo Running
-    eval "hyperfine --export-json run_time/$(echo $benchmark)_no_checks.json $(printf "'~/wasmtime_no_checks_at_all/target/release/wasmtime --allow-precompiled %s/%s_no_checks.cwasm'" $path $benchmark)" >> /dev/null
+    eval "hyperfine --export-json run_time/$(echo $benchmark)_no_checks.json $(printf "'~/no_checks/target/release/wasmtime --allow-precompiled %s/%s_no_checks.cwasm'" $path $benchmark)" >> /dev/null
 
     python3 utilities/generate_csv_line_from_hyperfine.py $benchmark run_time.csv --json_files run_time/$(echo $benchmark)_plain.json run_time/$(echo $benchmark)_prechk.json run_time/$(echo $benchmark)_no_checks.json --cutoff=1 --small_csv=run_time_small.csv
 done
