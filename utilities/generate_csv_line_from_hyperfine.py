@@ -29,7 +29,7 @@ for json_file in json_files:
         mean = data['results'][0]['mean']
         times = data['results'][0]['times']
         # Two significant digits
-        #mean = round(mean, -int(math.floor(math.log10(abs(mean)))) + 1)
+        # mean = round(mean, -int(math.floor(math.log10(abs(mean)))) + 1)
         sem = stats.sem(times)
         results['mean'].append(mean)
         results['sem'].append(sem)
