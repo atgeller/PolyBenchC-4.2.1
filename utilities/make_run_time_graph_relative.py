@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.patches as mpatches
 from matplotlib import rcParams
+import matplotlib.ticker as mtick
 
 # read the CSV file into a pandas DataFrame
 data = pd.read_csv('run_time_relative.csv')
@@ -28,8 +29,7 @@ no_checks_bar = ax.bar(index + 1*bar_width, data_points.iloc[:, 1], bar_width,
            alpha=1, color='C'+str(1), label=labels[1],
            yerr=stddevs.iloc[:, 1], capsize=3, hatch=hatches[1])
 
-ax.set_xlabel('Benchmark')
-ax.set_ylabel('Execution Time (% of wasm)')
+ax.set_ylabel('Execution Time Relative to Wasm')
 ax.set_xticks(index + bar_width - 0.2)
 ax.set_xticklabels([""] + names, rotation=45, ha='right', rotation_mode="anchor")
 ax.set_title('Comparison of wasm-prechk and wasm-no-checks run times to wasm')
@@ -40,16 +40,21 @@ wasm_line = plt.axhline(y=1, color='C2', linestyle='--', label="wasm (100%)")
 handle_1 = mpatches.Patch(facecolor='C0',alpha=1,hatch='//',label='wasm-prechk/wasm')
 handle_2 = mpatches.Patch(facecolor='C1',alpha=1,hatch='---',label='no_checks/wasm')
 
-plt.legend([wasm_line, handle_1, handle_2], ['wasm (100%)', 'wasm-prechk/wasm', 'no_checks/wasm'], fontsize="medium", handlelength=1.5, handleheight=1.5, loc='center right', bbox_to_anchor=(1.35, 0.45))
+plt.legend([wasm_line, handle_1, handle_2], ['Wasm (100%)', 'Wasm-prechk/Wasm', 'No_checks/Wasm'], fontsize="medium", handlelength=1.5, handleheight=1.5, loc='center right', bbox_to_anchor=(1.35, 0.45))
 
 plt.tight_layout()
 
 ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
 
-# save the chart as a PNG image
+def percentage_format(x, pos):
+    return f'{x*100:.0f}%'
+
+formatter = mtick.FuncFormatter(percentage_format)
+plt.gca().yaxis.set_major_formatter(formatter)
+
 plt.tight_layout()
-plt.savefig('run_time_relative.png')
+plt.savefig('run_time_relative.svg', format='svg')
 
 # display the chart
 plt.show()
