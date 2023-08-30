@@ -18,33 +18,33 @@
   (type (;16;) (func (param i64 i32 i32) (result i32)))
   (type (;17;) (func (param i32 i32 i32 i32 i32)))
   (type (;18;) (func (post
-                      (eq (i32 1) (i32.lt_u (local 0) (i32 33554432)))
-                      (eq (i32 1) (i32.lt_u (i32.add (local 0) (i32 10000)) (i32 33554432)))
+                      (eq (i32 1) (i32.lt_u (local 0) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 0) (i32 10000)) (i32 67108864)))
                       (eq (local 2) (old_local 2)))))
   (type (;19;) (func (pre
-                      (eq (i32 1) (i32.lt_u (local 0) (i32 33554432)))
-                      (eq (i32 1) (i32.lt_u (i32.add (local 0) (i32 10000)) (i32 33554432)))
+                      (eq (i32 1) (i32.lt_u (local 0) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 0) (i32 10000)) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (local 2) (i32 2500))))))
   (type (;20;) (func (post
-                      (eq (i32 1) (i32.lt_u (local 0) (i32 33554432)))
-                      (eq (i32 1) (i32.lt_u (i32.add (local 0) (i32 10000)) (i32 33554432)))
-                      (eq (i32 1) (i32.lt_u (local 1) (i32 33554432)))
-                      (eq (i32 1) (i32.lt_u (i32.add (local 1) (i32 25000000)) (i32 33554432))))))
+                      (eq (i32 1) (i32.lt_u (local 0) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 0) (i32 10000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 1) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 1) (i32 25000000)) (i32 67108864))))))
   (type (;21;) (func (pre
-                      (eq (i32 1) (i32.lt_u (local 0) (i32 33554432)))
-                      (eq (i32 1) (i32.lt_u (i32.add (local 0) (i32 10000)) (i32 33554432)))
-                      (eq (i32 1) (i32.lt_u (local 1) (i32 33554432)))
-                      (eq (i32 1) (i32.lt_u (i32.add (local 1) (i32 25000000)) (i32 33554432)))
+                      (eq (i32 1) (i32.lt_u (local 0) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 0) (i32 10000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 1) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 1) (i32 25000000)) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (local 2) (i32 2500))))))
   (type (;22;) (func (post
                       (eq (local 0) (old_local 0))
                       (eq (local 1) (old_local 1))
                       (eq (local 5) (old_local 5)))))
   (type (;23;) (func (pre
-                      (eq (i32 1) (i32.lt_u (local 0) (i32 33554432)))
-                      (eq (i32 1) (i32.lt_u (i32.add (local 0) (i32 10000)) (i32 33554432)))
-                      (eq (i32 1) (i32.lt_u (local 1) (i32 33554432)))
-                      (eq (i32 1) (i32.lt_u (i32.add (local 1) (i32 25000000)) (i32 33554432)))
+                      (eq (i32 1) (i32.lt_u (local 0) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 0) (i32 10000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 1) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 1) (i32 25000000)) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (local 5) (i32 2499)))
                       (eq (i32 1) (i32.lt_u (local 4) (i32 2500)))
                       (eq (i32 1) (i32.gt_u (local 4) (i32 0)))
@@ -72,10 +72,10 @@
                       (eq (local 11) (old_local 11))
                       (eq (local 8) (old_local 8)))))
   (type (;26;) (func (pre
-                      (eq (i32 1) (i32.lt_u (local 0) (i32 33554432)))
-                      (eq (i32 1) (i32.lt_u (i32.add (local 0) (i32 10000)) (i32 33554432)))
-                      (eq (i32 1) (i32.lt_u (local 1) (i32 33554432)))
-                      (eq (i32 1) (i32.lt_u (i32.add (local 1) (i32 25000000)) (i32 33554432)))
+                      (eq (i32 1) (i32.lt_u (local 0) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 0) (i32 10000)) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (local 1) (i32 67108864)))
+                      (eq (i32 1) (i32.lt_u (i32.add (local 1) (i32 25000000)) (i32 67108864)))
                       (eq (i32 1) (i32.lt_u (local 5) (i32 2499)))
                       (eq (i32 1) (i32.lt_u (local 4) (i32 2500)))
                       (eq (i32 1) (i32.lt_u (local 2) (local 4)))
@@ -135,10 +135,10 @@
       local.get 0
       i32.const 10000
       i32.add
-      i32.const 33554432
+      i32.const 67108864
       i32.lt_u
       local.get 0
-      i32.const 33554432
+      i32.const 67108864
       i32.lt_u
       i32.and
       br_if 0
@@ -173,20 +173,20 @@
       local.get 0
       i32.const 10000
       i32.add
-      i32.const 33554432
+      i32.const 67108864
       i32.lt_u
       local.get 1
       i32.const 25000000
       i32.add
-      i32.const 33554432
+      i32.const 67108864
       i32.lt_u
       i32.and
       local.get 0
-      i32.const 33554432
+      i32.const 67108864
       i32.lt_u
       i32.and
       local.get 1
-      i32.const 33554432
+      i32.const 67108864
       i32.lt_u
       i32.and
       br_if 0
@@ -8755,7 +8755,7 @@
     global.set 0
     local.get 1)
   (table (;0;) 7 7 funcref)
-  (memory (;0;) 512 512)
+  (memory (;0;) 1024 1024)
   (global (;0;) (mut i32) (i32.const 5246576))
   (export "memory" (memory 0))
   (export "_start" (func $_start))

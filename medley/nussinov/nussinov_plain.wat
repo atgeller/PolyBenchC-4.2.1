@@ -8643,7 +8643,7 @@
     global.set 0
     local.get 1)
   (table (;0;) 7 7 funcref)
-  (memory (;0;) 512 512)
+  (memory (;0;) 1024 1024)
   (global (;0;) (mut i32) (i32.const 5246576))
   (export "memory" (memory 0))
   (export "_start" (func $_start))
