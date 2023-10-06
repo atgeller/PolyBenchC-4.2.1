@@ -8,8 +8,8 @@ do
     benchmark=$(basename ${i%.*})
     >&2 echo Sizing $benchmark
     printf "%s" $benchmark >> sizes.csv
-    ~/wasm-tools/target/debug/wasm-tools size $path/$(echo $benchmark)_plain.wat >> sizes.csv
-    ~/wasm-tools/target/debug/wasm-tools size $path/$(echo $benchmark)_prechk.wat >> sizes.csv
+    ~/wasm-tools/target/release/wasm-tools size $path/$(echo $benchmark)_plain.wat >> sizes.csv
+    ~/wasm-tools/target/release/wasm-tools size $path/$(echo $benchmark)_prechk.wat >> sizes.csv
 
     echo "" >> sizes.csv
     
