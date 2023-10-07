@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "name,code_1,type_1,code_2,type_2" > sizes.csv
+echo "name,wasm full binary size,wasm types binary size,prechk full binary size,prechk types binary size" > sizes.csv
 
 for i in `cat utilities/annotated_benchmark_list` ;
 do

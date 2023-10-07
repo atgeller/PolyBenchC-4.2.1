@@ -10,9 +10,9 @@ data = pd.read_csv('run_time_relative.csv')
 
 # extract the benchmark names, data points, and standard deviations
 names = data['name']
-labels = ['wasm-prechk/wasm_dyn', 'no_checks/wasm_dyn', 'vm_guard/wasm_dyn']
-data_points = data[['B/A', 'C/A', 'D/A']]
-stddevs = data[['sem(B/A)', 'sem(C/A)', 'sem(D/A)']]
+labels = ['prechk/wasm_dyn', 'no_checks/wasm_dyn', 'wasm_vm/wasm_dyn']
+data_points = data[['prechk/wasm_dyn', 'no_checks/wasm_dyn', 'wasm_vm/wasm_dyn']]
+stddevs = data[['sem(prechk/wasm_dyn)', 'sem(no_checks/wasm_dyn)', 'sem(wasm_vm/wasm_dyn)']]
 hatches= ['//', '--', 'ooo']
 
 # create the bar chart
@@ -41,11 +41,11 @@ ax.set_title('Comparison of wasm-prechk, wasm-no-checks, and vm_guard run times 
 # Add a dashed line
 wasm_line = plt.axhline(y=1, color='C3', linestyle='--', label="wasm (100%)")
 
-handle_1 = mpatches.Patch(facecolor='C0',alpha=1,hatch='//',label='wasm-prechk/wasm_dyn')
+handle_1 = mpatches.Patch(facecolor='C0',alpha=1,hatch='//',label='prechk/wasm_dyn')
 handle_2 = mpatches.Patch(facecolor='C1',alpha=1,hatch='---',label='no_checks/wasm_dyn')
-handle_3 = mpatches.Patch(facecolor='C2',alpha=1,hatch='ooo',label='vm_guard/wasm_dyn')
+handle_3 = mpatches.Patch(facecolor='C2',alpha=1,hatch='ooo',label='wasm_vm/wasm_dyn')
 
-plt.legend([wasm_line, handle_1, handle_2, handle_3], ['Wasm_dyn (100%)', 'Wasm-prechk/Wasm_dyn', 'No_checks/Wasm_dyn', 'VM_guard/Wasm_dyn'], fontsize="medium", handlelength=1.5, handleheight=1.5, loc='center right', bbox_to_anchor=(1.45, 0.45))
+plt.legend([wasm_line, handle_1, handle_2, handle_3], ['Wasm_dyn (100%)', 'Wasm-prechk/Wasm_dyn', 'No_checks/Wasm_dyn', 'Wasm_vm/Wasm_dyn'], fontsize="medium", handlelength=1.5, handleheight=1.5, loc='center right', bbox_to_anchor=(1.45, 0.45))
 
 plt.tight_layout()
 

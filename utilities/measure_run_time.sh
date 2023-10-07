@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "name,mean_1,sem_1,mean_2,sem_2,mean_3,sem_3,mean_4,sem_4" > run_time.csv
+echo "name,wasm_dyn mean,wasm_dyn sem,prechk mean,prechk sem,no_checks mean,no_checks sem,wasm_vm mean,wasm_vm sem" > run_time.csv
 
 for i in `cat utilities/annotated_benchmark_list` ;
 do
