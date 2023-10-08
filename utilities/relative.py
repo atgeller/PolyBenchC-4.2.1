@@ -9,7 +9,7 @@ names = data['name']
 data_points = data[['wasm_dyn mean', 'prechk mean', 'no_checks mean', 'wasm_vm mean']]
 stddevs = data[['wasm_dyn sem', 'prechk sem', 'no_checks sem', 'wasm_vm sem']]
 
-with open("run_time_relative.csv", "a") as myfile:
+with open("run_time_relative.csv", "w") as myfile:
     myfile.write("name,prechk/wasm_dyn,sem(prechk/wasm_dyn),no_checks/wasm_dyn,sem(no_checks/wasm_dyn),wasm_vm/wasm_dyn,sem(wasm_vm/wasm_dyn)\n")
 
     for i in range(len(names)):

@@ -45,7 +45,7 @@ handle_1 = mpatches.Patch(facecolor='C0',alpha=1,hatch='//',label='prechk/wasm_d
 handle_2 = mpatches.Patch(facecolor='C1',alpha=1,hatch='---',label='no_checks/wasm_dyn')
 handle_3 = mpatches.Patch(facecolor='C2',alpha=1,hatch='ooo',label='wasm_vm/wasm_dyn')
 
-plt.legend([wasm_line, handle_1, handle_2, handle_3], ['wasm_dyn (100%)', 'prechk/wasm_dyn', 'no_checks/Wasm_dyn', 'wasm_vm/wasm_dyn'], fontsize="medium", handlelength=1.5, handleheight=1.5, loc='center right', bbox_to_anchor=(1.45, 0.45))
+plt.legend([wasm_line, handle_1, handle_2, handle_3], ['wasm_dyn (100%)', 'prechk/wasm_dyn', 'no_checks/wasm_dyn', 'wasm_vm/wasm_dyn'], fontsize="medium", handlelength=1.5, handleheight=1.5, loc='center right', bbox_to_anchor=(1.4, 0.45))
 
 plt.tight_layout()
 
