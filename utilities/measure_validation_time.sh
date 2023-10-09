@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "name,wasm mean,wasm sem,prech mean,prechk sem" > validation_time.csv
+echo "name,wasm mean,wasm sem,prechk mean,prechk sem" > validation_time.csv
 
 for i in `cat utilities/annotated_benchmark_list` ;
 do
